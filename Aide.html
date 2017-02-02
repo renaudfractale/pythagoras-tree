@@ -1,0 +1,151 @@
+<html>
+<head>
+<script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+</head>
+<body>
+<h1> Sommaire </h1>
+<h2>
+<ol type="1">
+  <li>Présentation des arbres de Pythagore</li>
+    <ol type="a">
+		<li>Construction avec des carrés</li>
+		<li>Construction avec des rectangles</li>
+	</ol>
+  <li>Présentation de l'interface graphique</li>
+  <ol type="a">
+	<li>Menu</li>
+	<li>Tree</li>
+	<li>Configuration</li>
+	<li>Ration</li>
+	<li>Graphique</li>
+	<li>Visualisation</li>
+	<li>Barre de progression</li>
+  </ol> 
+ <!--  <li>Définition du pattern/Motif</li>
+  <ol type="a">
+	<li>Création automatique d'un pattern</li>
+	<li>Création manuelle d'un pattern</li>
+  </ol> 
+  <li>Définition de la forme de base</li>
+  <li>Définition de la représentation des niveaux</li> 
+  <li>Exemples de Von Koch</li>
+  <ol type="a">
+	<li>Courbe classique</li>
+	<li>Courbe pour alpha=90°</li>
+	<li>Courbe pour alpha=0°</li>
+  </ol>-->
+</ol> 
+</h2>
+
+
+<h2>1. Présentation des Arbres de Pythagore</h2>
+<p> L'arbre de Pythagore est une fractale plane construite à l'aide de rectangle ou de carré. Elle porte le nom de Pythagore car chaque triplet de carrés en contact enclot un triangle rectangle, c’est une configuration traditionnellement utilisée pour illustrer le théorème de Pythagore. </p>
+<h3>1.a Construction avec des carrés</h3>
+<p>La construction de l'arbre de Pythagore débute avec un simple carré. Sur ce carré sont construits plusieurs autres branches, chacun plus petit d'un facteur r, tels que les coins des carrés soient en contact. La procédure est appliquée récursivement à chaque carré, jusqu'à l’infini. </p>
+<div lang="latex"  align="center">
+r=sin \left( \frac{90^o }{\text{nombre de branches}} \right)^2
+</div>
+<p align="center"> <img src="images/Arbre_carre.png" > <br> Passage du niveau 0 au niveau 3 </p> 
+
+<h3>1.b Construction avec des rectangles</h3>
+<p>La construction de l'arbre de Pythagore débute avec un simple rectangle. Sur ce rectangle sont construits plusieurs autres branches, chacun plus petit d'un facteur r, tels que les coins des carrés soient en contact. La procédure est appliquée récursivement à chaque rectangle, jusqu'à l’infini. </p>
+<div lang="latex"  align="center">
+r=sin \left( \frac{90^o}{\text{nombre de branches}} \right) \text{ x }  \text{Pourcentage}
+</div>
+<p align="center"> <img src="images/Arbre_rect.png" > <br> Passage du niveau 0 au niveau 3 </p> 
+<h2>2. Présentation de l'interface graphique</h2>
+<p>L'interface graphique est décomposée en 5 éléments distinctes</p>
+<h3>2.a Menu</h3>
+<p>Le Menu est subdivisé en 4 parties :</p>
+<ul>
+	<li> Le menu Fichier </li>
+	<p> Ce Menu permet :</p>
+	<ul>
+		<li>De repartir d'un nouveau fichier ("Nouveau Ctrl+N")</li>
+		<li>D'ouvrir un fichier data existant ("Ouvrir Ctrl+O")</li>
+		<li>D'enregistrer un fichier data ("Sauvegarder Ctrl+S")</li>
+		<li>D'enregistrer un fichier en svg(format graphique vectoriel, lisible par explorer ou firefox) ("Sauvegarder en svg")</li>
+	</ul>
+	<p align="center"> <img src="images/Menu_Fichier.png" > <br> Menu Fichier. </p>
+	
+	<li> Le menu Exemples </li>
+	<p> Ce Menu permet de partir d'arbres de base</p>
+	<p align="center"> <img src="images/Menu_Exemples.png" > <br> Menu Exemples. </p>
+	
+	<li> Le menu ?(A propos) </li>
+	<p> Ce Menu permet :</p>
+	<ul>
+		<li>D'afficher l'aide</li>
+		<li>De présenter le développeur</li>
+		<li>De donner des informations sur la version du programme</li>
+	</ul>
+	<p align="center"> <img src="images/Menu_Apropos.png" > <br> Menu ?(A propos). </p>	
+</ul>
+
+<h3>2.b Tree</h3>
+<p>Cette interface permet de définir le nombre de branche de l'arbre et la pondération de chaque branches (en %) .</p>
+<p align="center"> <img src="images/W_tree.png" > <br> Interface Tree. </p>	
+  
+<h3>2.c Configuration</h3>
+ <p>Cette interface permet de définir : </p>
+<ul>
+	<li>Le nombre de niveaux, de génération de l'arbre</li>
+	<li>La longueur de tronc</li>
+	<li>La largeur de tronc</li>
+</ul><p align="center"> <img src="images/W_conf.png" > <br> Interface Tree. </p>	
+
+<h3>2.d Ration</h3>
+<p>Cette interface permet de définir le ratio entre 2 génération de branche.</p>
+<p align="center"> <img src="images/W_Ratio.png" > <br> Interface Ratio </p>	
+<table border="1" align="center">
+   <tr>
+      <th>Ratio décoché</th>
+      <th>Ratio coché avec 100 %</th>
+	  <th>Ratio coché avec 50 %</th>
+   </tr>
+   <tr>
+      <td><img src="images/cas_ration_1.png" ></td>
+      <td><img src="images/cas_ration_2.png" ></td>
+      <td><img src="images/cas_ration_3.png" ></td>
+   </tr>
+</table>
+<p align="center">Tableau des Ratio. </p>
+ 
+<h3>2.e Graphique</h3> 
+ <p>Cette interface permet de définir : </p>
+<ul>
+	<li>Si on est en couleur uni ou en couleur aléatoire </li>
+	<li>Si affiche le bout rond	 </li>
+</ul>
+<p align="center"> <img src="images/W_Graphique.png" > <br> Interface du Graphisme. </p>
+<table border="1" align="center">
+   <tr>
+      <th></th>
+      <th>Avec bout rond</th>
+      <th>Sans bout rond</th>
+   </tr>
+   <tr>
+      <td>Couleur Automatique</td>
+      <td><img src="images/cas_A_AB.png" ></td>
+      <td><img src="images/cas_A_SB.png" ></td>
+   </tr>
+   <tr>
+      <td>Couleur Unie</td>
+      <td><img src="images/cas_U_AB.png" ></td>
+      <td><img src="images/cas_U_SB.png" ></td>
+   </tr>
+</table>
+<p align="center">Tableau des  Graphismes. </p>
+
+ 
+<h3>2.f Visualisation</h3>  
+<p align="center"> Cette interface permet visualiser la fractale en utilisant les boutons "Zoom +" et "Zoom -".</p>
+<p align="center"> <img src="images/W_Wiew.png" > <br> Interface de Visualisation. </p>
+
+	
+<h3>2.g Barre de progression</h3>
+<p>Cette interface permet de voir l'avancement des calculs.</p>
+<p align="center"> <img src="images/W_Bar.png" > <br> Barre de progression. </p>	
+
+
+</body>
