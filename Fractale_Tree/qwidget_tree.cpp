@@ -36,7 +36,7 @@ void QWidget_tree::Set_Prcent(double prcent)
     Prcent=prcent;
 
     int no=qRound(prcent*100);
-    QString txt=QString::number((double)no/100)+"%";
+    QString txt=QString::number(double(no)/100.0)+"%";
     Label_Prcent->setText(txt);
 }
 

@@ -111,7 +111,7 @@ void Draw_Tree::Draw_Graph()
     int nb_max=0;
     for(int i=1;i<=niveau_max;i++)
     {
-        nb_max=nb_max+(int)qPow(nb_branche,i);
+        nb_max=nb_max+int(qPow(qreal(nb_branche),qreal(i)));
     }
     ProgressBar->setMaximum(nb_max);
     ProgressBar->setValue(0);
@@ -311,7 +311,7 @@ void Draw_Tree::Draw_Line()
         if(file.open(QIODevice::Append  | QIODevice::Text))
         {
             QTextStream out(&file);
-            out << "<line x1=\"" << x1 << "\" y1=\"" << y1 << "\" x2=\"" << x2 << "\" y2=\"" << y2 << "\" stroke=\"rgb(" << Color.red() <<"," << Color.green() << "," << Color.blue() << ")\" stroke-width=\"" << (int)sizePen << "\"/>\n";
+            out << "<line x1=\"" << x1 << "\" y1=\"" << y1 << "\" x2=\"" << x2 << "\" y2=\"" << y2 << "\" stroke=\"rgb(" << Color.red() <<"," << Color.green() << "," << Color.blue() << ")\" stroke-width=\"" << int(sizePen) << "\"/>\n";
             if(with_bout)
             {
                 out << "<circle cx=\"" << x2 <<"\" cy=\"" << y2 << "\" r=\"" << sizePen/2 << "\" fill=\"rgb(" << Color.red() <<"," << Color.green() << "," << Color.blue() << ")\"/> \n";

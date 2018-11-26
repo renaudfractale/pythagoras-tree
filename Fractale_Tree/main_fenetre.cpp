@@ -179,7 +179,7 @@ void Main_fenetre::createActions()
     }
 void Main_fenetre::createMenus()
 {
-    QMenuBar *menuBar_rh=new QMenuBar(0);
+    QMenuBar *menuBar_rh=new QMenuBar();
     fileMenu=menuBar_rh->addMenu(tr("&Fichier"));
         fileMenu->addAction(newAct);
         fileMenu->addAction(openAct);

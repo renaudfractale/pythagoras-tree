@@ -41,7 +41,7 @@ void QWidget_trees::Update_Value()
     {
         total=total+Tab_Widget_tree[i]->Get_Value();
     }
-    double prcent=100/((double)total);
+    double prcent=100.0/double(total);
     for(int i=0;i<nb_Widget_tree;i++)
     {
         int value=Tab_Widget_tree[i]->Get_Value();

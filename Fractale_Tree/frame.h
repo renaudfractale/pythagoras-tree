@@ -9,7 +9,11 @@
  * \author Henry Renaud
  * \version 0.5
  */
-
+/*! \class Frame
+ * \brief lib gestion de repère 2D
+ *
+ *  La classe gere les fonctions de deplacement des branches
+ */
 class Frame
 {
 public:
