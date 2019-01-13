@@ -37,7 +37,7 @@ class Main_fenetre : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit Main_fenetre(QWidget *parent = 0);
+    explicit Main_fenetre(QWidget *parent=0);
 
 private:
 
